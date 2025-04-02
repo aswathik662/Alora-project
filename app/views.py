@@ -26,6 +26,7 @@ def user_register(request):
         password=request.POST['password']
         confirm_password=request.POST['confirm_password']
         phone_number=request.POST['phone_number']
+        
         gender=request.POST['gender']
         
 

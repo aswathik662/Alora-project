@@ -7,7 +7,7 @@ class User_details(models.Model):
     user_id=models.ForeignKey(User,on_delete=models.CASCADE)
     phone_number=models.CharField(max_length=10,unique=True)
     gender=models.CharField(max_length=100)
-    address=models.TextField()
+    address=models.TextField(max_length=255, default="Unknown")
 
 class Halls(models.Model):
     name=models.CharField(max_length=100)
