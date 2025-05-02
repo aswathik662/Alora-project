@@ -35,10 +35,14 @@ urlpatterns = [
     path('hall_details/',views.hall_details,name='hall_details'),
     path('add_hall/',views.add_hall,name='add_hall'),
     path('food_details/',views.food_details,name='food_details'),
+    path('update_food/<int:food_id>/',views.update_food,name='update_food'),##
     path('add_food/',views.add_food,name='add_food'),
     path('decoration_details/',views.decoration_details,name='decoration_details'),
     path('add_decoration',views.add_decoration,name='add_decoration'),
+    path('update_decoration/<int:id>/',views.update_decoration,name='update_decoration'),
+    path('delete_decoration/<int:id>/', views.delete_decoration, name='delete_decoration'),###
     path('adminviewbooking/',views.admin_view_booking,name='admin_view_booking'),
+    path('booking_detail/<int:id>/', views.booking_detail, name='booking_detail'),###
     path('adminacceptreject/<int:id>/',views.accept_reject_booking,name='acceptrejectbooking'),
 
 
@@ -56,7 +60,11 @@ urlpatterns = [
     path('service',views.service,name='service'),
     path('aboutus',views.aboutus,name='aboutus'),
     path('gallery',views.gallery,name='gallery'),
-    path('testimonial',views.testimonial,name='testimonial')
+    path('testimonial',views.testimonial,name='testimonial'),
+    path('update_hall/<int:hall_id>/',views.update_hall,name='update_hall'),
+    path('view_hall/<int:hall_id>/',views.hall_detail_view,name='view_hall'),
+    path('delete_hall/<int:hall_id>/',views.delete_hall,name='delete_hall'),
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT) 

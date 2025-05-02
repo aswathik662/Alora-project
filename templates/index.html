@@ -120,7 +120,7 @@
     }
     .r3 .h1r3{
       font-family: 'Darker Grotesque';
-      font-size: 29px;
+      font-size: 25px;
     }
     .im img{
       padding: 5px;
@@ -213,7 +213,7 @@
         <img src="{% static 'alora_icon.png' %}" alt="icon" height="25px" width="25px">
       </div>
       <div class="rc2">
-        <a href="{% url 'login' %}">Home</a>
+        <a href="{% url 'home' %}">Home</a>
         <a href="{% url 'service' %}">Services</a>
         <a href="{% url 'aboutus' %}">About</a>
         <a href="{% url 'gallery' %}">Gallery</a>
@@ -229,7 +229,7 @@
             <i class="bi bi-list"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item active" href="{% url 'index' %}">Home</a></li>
+            <li><a class="dropdown-item active" href="{% url 'home' %}">Home</a></li>
             <li><a class="dropdown-item" href="{% url 'service' %}">Services</a></li>
             <li><a class="dropdown-item" href="{% url 'aboutus' %}">About</a></li>
             <li><a class="dropdown-item" href="{% url 'gallery' %}">Gallery</a></li>
@@ -255,7 +255,7 @@
       </div>
 
       <div class="carousel-button-container">
-        <a href="#"><button class="btn ">Know More</button></a>
+        <a href="{% url 'aboutus' %}"><button class="btn ">Know More</button></a>
       </div>
 
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -344,38 +344,36 @@
     </div>
   </div>
    <!-- Footer Section -->
-   <footer class="bg-dark text-white text-center text-lg-start mt-5">
-    <div class="container p-4">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Alora</h5>
-                <p>Copyright © Alora Events. All rights reserved.</p>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Quick Links</h5>
-                <ul class="list-unstyled">
-                    <li><a href="{% url 'home' %}" class="text-white">Home</a></li>
-                    <li><a href="{% url 'service' %}" class="text-white">Services</a></li>
-                    <li><a href="{% url 'aboutus' %}" class="text-white">About us</a></li>
-                    <li><a href="{% url 'gallery' %}" class="text-white">Gallery</a></li>
-                    <li><a href="{% url 'testimonial' %}" class="text-white">Testimonial</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-4 col-md-12 text-center">
-                <h5 class="text-uppercase">Contact Us</h5>
-                <ul class="footer-links">
-                  <li>✉ aloraevents@gmail.com</li>
-                  <li>📞 Phone: 9633769633</li>
-                  <li>📞 9645757016</li>
-                  <li>📍 37/1143-B Karanthur, Nilambur Rd, 2nd Floor, Paradise, Kondotty, Kerala 673638</li>
-              </ul>
-            </div>
+   <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="logo">ALORA</div>
+          <p class="mt-3">Copyright © Alora Events. All rights reserved.</p>
         </div>
+        <div class="col-md-4 mb-4">
+          <h4>Links</h4>
+          <ul class="footer-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'service' %}">Services</a></li>
+            <li><a href="{% url 'aboutus' %}">About</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'testimonial' %}">Testimonials</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h4>Contact Us</h4>
+          <ul class="footer-links">
+            <li>✉ aloraevents@gmail.com</li>
+            <li>📞 Phone: 9633769633</li>
+            <li>📞 9645757016</li>
+            <li>📍 37/1143-B Karanthur, Nilambur Rd, 2nd Floor, Paradise, Kondotty, Kerala 673638</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="text-center p-3 bg-secondary">
-        
-    </div>
-</footer>
+  </footer>
+
 
 <!-- JavaScript for Toggle Button -->
 <script>
